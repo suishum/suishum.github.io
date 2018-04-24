@@ -5,5 +5,5 @@
   <li><a href="education.php"><i class="fas fa-graduation-cap"></i>Education</a></li>
   <li><a href="experience.php"><i class="fas fa-briefcase"></i>Experience</a></li>
   <li><a href="portfolio.php"><i class="fas fa-folder-open"></i>Portfolio</a></li>
-  <li><a href="index.php#contact"><i class="fas fa-info"></i>Contact</a></li>
+  <!-- <li><a href="index.php#contact"><i class="fas fa-info"></i>Contact</a></li> -->
 </ul>
