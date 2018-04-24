@@ -1,17 +1,113 @@
 body {
   background: white;
   color: black;
+  font-family: 'Open Sans', sans-serif;
 }
 
+/* PLANNING */
 div {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border: 1px solid black;
+  /* border-bottom: 1px solid black; */
 }
 
+/* LAYOUT */
+body {
+  position: relative;
+}
+.container {
+  width: calc(100vw - 120px);
+  right: 0;
+  position: absolute;
+  background-color: dodgerblue;
+  /* opacity: 0.5; */
+  height: 100vh;
+}
+.container > .right-content {
+  height: 100%;
+}
+.left-content {
+  float: left;
+}
+.right-content {
+  overflow: auto;
+}
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* NAVBAR */
 li {
   display: inline-block;
+  padding: 10px;
 }
-
 li:hover {
   cursor: pointer;
+}
+.navbar {
+  background-color: orange;
+  /* padding: 0px; */
+  height: 100vh;
+  /* width: 150px; */
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: flex-end; */
+}
+.align-top {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.rotated-up {
+  -ms-transform: translate(0px, -50px) rotate(-90deg);
+  -moz-transform: translate(0px, -50px) rotate(-90deg);
+  -webkit-transform: translate(0px, -50px) rotate(-90deg);
+  transform: translate(0px, -50px) rotate(-90deg);
+  filter: none; /* Mandatory for IE9 to show the vertical text correctly */
+
+  -ms-transform-origin: center center 0;
+  -moz-transform-origin: center center 0;
+  -webkit-transform-origin: center center  0;
+  transform-origin: center center 0;
+}
+.align-bottom {
+  display: inline-block;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* PAGE SIZE*/
+/* .full-height {
+  height: calc(100vh - 70px);
+} */
+
+/* TITLE PAGE */
+.hero-text {
+  width: 50%;
+  /* height: 50vh; */
+  padding: 25vh 100px 35vh;
+}
+.hero-title {
+  font-size: 36px;
+}
+.hero-subtitle {
+  font-size: 28px;
+}
+
+/* CONTACT LINKS */
+.contact {
+  z-index: 10;
+  background-color: green;
+  position: absolute;
+  /* width: 100px; */
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  padding: 20px;
 }

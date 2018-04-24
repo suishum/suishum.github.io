@@ -5,7 +5,7 @@
   include("includes/navbar.php");
 ?>
 
-<div>
+<div class="container">
   <i class="fas fa-briefcase"></i>
   <h2>Experience</h2>
   <!-- HAVE A TIMELINE THAT REVEALS MORE INFORMATION ON HOVER -->

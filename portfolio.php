@@ -5,7 +5,7 @@
   include("includes/navbar.php");
 ?>
 
-<div>
+<div class="container">
   <i class="fas fa-folder-open"></i>
   <h2>Portfolio</h2>
   <div>

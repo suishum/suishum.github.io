@@ -5,7 +5,7 @@
   include("includes/navbar.php");
 ?>
 
-<div>
+<div class="container">
   <i class="fas fa-graduation-cap"></i>
   <h2>Education</h2>
   <div>
