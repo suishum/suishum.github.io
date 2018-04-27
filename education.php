@@ -10,16 +10,12 @@
   <h2>Education</h2>
   <div>
     <p>General Assembly</p>
-    <p>Title - Time - Location</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Web Development Immersive - Jan'18 to Apr'18 - London</p>
+    <p>The Web Development Immersive is a 12-week full-time course teaching programming fundamentals using the industry’s most used programming languages in a collaborative environment. I have created four projects involving different technologies during the course to prepare myself for my first job as a developer.</p>
   </div>
   <div>
     <p>Queen Mary University</p>
-    <p>Title - Time - Location</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>2:1 Physics (BSc) - '11 to '14 - London</p>
+    <p>The straight physics programme offered breadth and flexibility. My degree gave me the chance to study a range of subjects in astrophysics, particle physics and theoretical physics whilst honing mathematical skill.</p>
   </div>
 </div>
-
-<?php
-  include("includes/footer.php");
-?>
