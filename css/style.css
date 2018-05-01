@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'acre';
+  src: url("fonts/acre-medium-webfont.eot");
+  src: url("fonts/acre-medium-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/acre-medium-webfont.woff2") format("woff2"), url("fonts/acre-medium-webfont.woff") format("woff"), url("fonts/acre-medium-webfont.ttf") format("truetype"), url("fonts/acre-medium-webfont.svg#acremedium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 body {
   background: white;
   color: #0E2E54;
@@ -6,6 +12,9 @@ body {
 div {
   border: 1px solid black;
   /* border-bottom: 1px solid black; */ }
+
+section {
+  border: 1px solid black; }
 
 /* LAYOUT */
 body {
@@ -18,9 +27,45 @@ body {
   /* opacity: 0.5; */
   height: 100vh; }
 
+.full-height {
+  padding: 50px;
+  height: calc(100vh - 100px);
+  position: relative; }
+
+.section-title {
+  font-size: 50px;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 150px; }
+
 .flex-space-around {
   display: flex;
   justify-content: space-around; }
+
+.rotated-up-center {
+  -ms-transform: translate(0px, -50px) rotate(-90deg);
+  -moz-transform: translate(0px, -50px) rotate(-90deg);
+  -webkit-transform: translate(0px, -50px) rotate(-90deg);
+  transform: translate(0px, -50px) rotate(-90deg);
+  filter: none;
+  /* Mandatory for IE9 to show the vertical text correctly */
+  -ms-transform-origin: center center 0;
+  -moz-transform-origin: center center 0;
+  -webkit-transform-origin: center center  0;
+  transform-origin: center center 0; }
+
+.rotated-up-rb {
+  -ms-transform: translate(-50px, -100px) rotate(-90deg);
+  -moz-transform: translate(-50px, -100px) rotate(-90deg);
+  -webkit-transform: translate(-50px, -100px) rotate(-90deg);
+  transform: translate(-50px, -100px) rotate(-90deg);
+  filter: none;
+  /* Mandatory for IE9 to show the vertical text correctly */
+  -ms-transform-origin: center center 0;
+  -moz-transform-origin: center center 0;
+  -webkit-transform-origin: center center  0;
+  transform-origin: right bottom; }
 
 .navbar {
   background-color: #0E2E54;
@@ -32,40 +77,39 @@ body {
   position: fixed;
   top: 0;
   left: 0; }
+  .navbar .nav-link {
+    display: inline-block;
+    padding: 10px; }
+    .navbar .nav-link.active {
+      font-weight: 800; }
+    .navbar .nav-link a {
+      color: #A89B65;
+      text-decoration: none; }
+    .navbar .nav-link:hover {
+      cursor: pointer; }
   .navbar .align-top {
     display: flex;
     flex-direction: column;
     margin-top: 20px; }
-    .navbar .align-top li {
-      display: inline-block;
-      padding: 10px; }
-      .navbar .align-top li a {
-        color: #A89B65; }
-      .navbar .align-top li:hover {
-        cursor: pointer; }
   .navbar .contact {
     display: flex;
     flex-direction: column;
     margin-bottom: 80px; }
     .navbar .contact a {
       color: #A89B65; }
-  .navbar .rotated-up {
-    -ms-transform: translate(0px, -50px) rotate(-90deg);
-    -moz-transform: translate(0px, -50px) rotate(-90deg);
-    -webkit-transform: translate(0px, -50px) rotate(-90deg);
-    transform: translate(0px, -50px) rotate(-90deg);
-    filter: none;
-    /* Mandatory for IE9 to show the vertical text correctly */
-    -ms-transform-origin: center center 0;
-    -moz-transform-origin: center center 0;
-    -webkit-transform-origin: center center  0;
-    transform-origin: center center 0; }
   .navbar .align-bottom {
     display: inline-block;
     margin-bottom: 30px;
     position: relative; }
-    .navbar .align-bottom a {
-      color: #A89B65; }
+    .navbar .align-bottom .brand {
+      font-family: 'acre', 'Open Sans', sans-serif;
+      color: #A89B65;
+      text-transform: uppercase;
+      font-weight: 600px;
+      font-size: 36px;
+      line-height: 85%; }
+      .navbar .align-bottom .brand span {
+        letter-spacing: 2px; }
 
 /* PAGE SIZE*/
 /* .full-height {
@@ -75,20 +119,32 @@ body {
   position: fixed;
   top: 0;
   left: 120px;
-  width: calc(50% - 60px); }
-  .left-content .hero-text {
-    width: 50%;
-    /* height: 50vh; */ }
-    .left-content .hero-text .hero-title {
-      font-size: 36px; }
-    .left-content .hero-text .hero-subtitle {
-      font-size: 28px; }
+  width: 80%; }
+  .left-content .hero {
+    width: 40%;
+    /* height: 50vh; */
+    padding: 50px 30px;
+    height: 100vh; }
+    .left-content .hero .hero-title {
+      font-family: 'acre', 'Open Sans', sans-serif;
+      font-size: 80px;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 85%;
+      margin-bottom: 0.5em; }
+      .left-content .hero .hero-title span {
+        letter-spacing: 3px; }
+    .left-content .hero img {
+      width: 100%; }
 
 .right-content {
   height: 100vh;
   position: absolute;
   right: 0;
-  width: 50%; }
+  width: 60%; }
+
+.portfolio-container {
+  padding: 50px; }
 
 /* CONTACT LINKS */
 .contact {
