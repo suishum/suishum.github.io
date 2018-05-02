@@ -1,31 +1,50 @@
-console.log('js running');
-
 $(document).ready(function() {
-  console.log('site jquery running');
-  const baseUrl = '/suishum.github.io';
+  console.log('jquery running');
+  const portfolioContainer = $('.portfolio-container')[0];
   const hero = $('.hero')[0];
   const heroImage = $(hero).children()[1];
+  const heroTitle = $(hero).children()[0];
   let scrollbarLocation = $(this).scrollTop();
+
   function modifyHero() {
     if (scrollbarLocation > 100) {
       $(hero).css('right', '400px');
       $(heroImage).css({
         'width': '50%',
+        'transition': '1.5s',
+        'position': 'relative',
+        'right': '100px',
+        'bottom': '55px'
+      });
+      $(heroTitle).css({
+        'z-index': 10,
+        'position': 'relative',
+        'left': '0',
+        'top': '0',
         'transition': '1.5s'
       });
     } else {
-      $(hero).css('right', '170px');
+      $(hero).css('right', '180px');
       $(heroImage).css({
         'width': '80%',
+        'transition': '1.5s',
+        'position': 'relative',
+        'right': '160px',
+        'bottom': '65px'
+      });
+      $(heroTitle).css({
+        'z-index': 10,
+        'position': 'relative',
+        'left': '160px',
+        'top': '65px',
         'transition': '1.5s'
       });
     }
   }
 
-  // HOMEPAGE JS
-  if (top.location.pathname === `${baseUrl}/index.php` || top.location.pathname === `${baseUrl}/`) {
-    console.log(top.location.pathname);
-    console.log('index page hi');
+  if (!portfolioContainer) {
+    // HOMEPAGE JS
+    console.log('i am the index page');
     // Variables
     const scrollLink = $('.scroll');
     // Resize hero image on first load
@@ -40,6 +59,7 @@ $(document).ready(function() {
       }, 1000 );
     });
 
+    // TODO: ADD ANIMATION FOR SECTION SWITCHING HERE? DING
     // Active link switching
     $(window).scroll(function() {
       scrollbarLocation = $(this).scrollTop();
@@ -54,13 +74,13 @@ $(document).ready(function() {
         }
       });
     });
-  }
-
-  // PORFOLIO PAGE JS
-  if (top.location.pathname === `${baseUrl}/portfolio.php`) {
-    console.log('portfolio page hi');
+  } else {
+    console.log('i am not index page');
+    // PORFOLIO PAGE JS
     const portfolioLink = $('.portfolio-link')[0];
     $(portfolioLink).addClass('active');
     $(portfolioLink).siblings().removeClass('active');
   }
+
+  // TODO: GET CONTACT FORM TO WORK
 });
