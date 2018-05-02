@@ -1,49 +1,54 @@
 console.log('js running');
 
 $(document).ready(function() {
-  const baseUrl = '/suishum.github.io';
   console.log('site jquery running');
-  // console.log(top.location.pathname);
-  // const url = top.location.href.split('#')[0];
-  // const idLoc = top.location.href.split('#')[1];
-  // console.log(url, idLoc);
-  // // if (top.location.pathname === '/suishum.github.io/portfolio.php') {
-  // //   // add active class to navbar links if the user lands on this page
-  // // }
-  //
-  // if (idLoc !== null) {
-  //   const activeLink = $(`.${idLoc}`)[0];
-  //   console.log('inside first conditional', url, idLoc, activeLink);
-  //   $(activeLink).addClass('active');
-  // } else if (idLoc === null) {
-  //   const homeLink = $('.home-link')[0];
-  //   $(homeLink).addClass('active');
-  // }
+  const baseUrl = '/suishum.github.io';
+  const hero = $('.hero')[0];
+  const heroImage = $(hero).children()[1];
+  let scrollbarLocation = $(this).scrollTop();
+  function modifyHero() {
+    if (scrollbarLocation > 100) {
+      $(hero).css('right', '400px');
+      $(heroImage).css({
+        'width': '50%',
+        'transition': '1.5s'
+      });
+    } else {
+      $(hero).css('right', '170px');
+      $(heroImage).css({
+        'width': '80%',
+        'transition': '1.5s'
+      });
+    }
+  }
 
   // HOMEPAGE JS
-  if (top.location.pathname === `${baseUrl}/index.php`) {
+  if (top.location.pathname === `${baseUrl}/index.php` || top.location.pathname === `${baseUrl}/`) {
+    console.log(top.location.pathname);
     console.log('index page hi');
-    console.log('smoothScroll running');
+    // Variables
     const scrollLink = $('.scroll');
-
-    // Smooth scrolling
+    // Resize hero image on first load
+    modifyHero();
+    console.log('hero image resized');
+    console.log('smoothScroll running');
+    // Smooth scrolling for navbar link clicks
     scrollLink.click(function(e) {
       e.preventDefault();
       $('body, html').animate({
         scrollTop: $(this.hash).offset().top
       }, 1000 );
-
-      // TODO: #hero, top: 2, #about, top: 830 use these figures when working out when the hero image should shrink
-      // console.log($(this.hash).offset().top);
     });
 
     // Active link switching
     $(window).scroll(function() {
-      const scrollbarLocation = $(this).scrollTop();
+      scrollbarLocation = $(this).scrollTop();
+      // Resize hero image on first load
+      modifyHero();
+      // Change highlighted link
       scrollLink.each(function() {
         const sectionOffset = $(this.hash).offset().top - 20;
         if ( sectionOffset <= scrollbarLocation ) {
-          // console.log(this);
           $(this).parent().addClass('active');
           $(this).parent().siblings().removeClass('active');
         }

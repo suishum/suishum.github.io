@@ -19,6 +19,9 @@
       <li class="nav-link portfolio-link"><a href="portfolio.php">
         <!-- <i class="fas fa-folder-open"></i> -->
         Portfolio</a></li>
+      <li class="nav-link contact-link"><a class="scroll" href="index.php#contact">
+        <!-- <i class="fas fa-envelope"></i> -->
+        Contact</a></li>
     </ul>
   </div>
 

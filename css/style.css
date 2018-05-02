@@ -30,7 +30,17 @@ body {
 .full-height {
   padding: 50px;
   height: calc(100vh - 100px);
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.6; }
+  .full-height p.lead {
+    font-size: 1.1em;
+    padding-bottom: 1em; }
+  .full-height svg {
+    display: block;
+    margin: 0 auto; }
 
 .section-title {
   font-size: 50px;
@@ -38,10 +48,6 @@ body {
   position: absolute;
   right: 0;
   top: 150px; }
-
-.flex-space-around {
-  display: flex;
-  justify-content: space-around; }
 
 .rotated-up-center {
   -ms-transform: translate(0px, -50px) rotate(-90deg);
@@ -121,10 +127,14 @@ body {
   left: 120px;
   width: 80%; }
   .left-content .hero {
-    width: 40%;
-    /* height: 50vh; */
-    padding: 50px 30px;
-    height: 100vh; }
+    width: 45%;
+    height: 100vh;
+    position: absolute;
+    right: 170px;
+    transition: 1.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
     .left-content .hero .hero-title {
       font-family: 'acre', 'Open Sans', sans-serif;
       font-size: 80px;
@@ -134,14 +144,25 @@ body {
       margin-bottom: 0.5em; }
       .left-content .hero .hero-title span {
         letter-spacing: 3px; }
-    .left-content .hero img {
-      width: 100%; }
 
 .right-content {
   height: 100vh;
   position: absolute;
   right: 0;
   width: 60%; }
+  .right-content .full-height .skills li {
+    display: inline-block;
+    width: 19%;
+    text-align: center;
+    margin-bottom: 10px; }
+    .right-content .full-height .skills li i {
+      font-size: 40px;
+      display: block; }
+    .right-content .full-height .skills li img {
+      width: 100%; }
+  .right-content .full-height form {
+    display: flex;
+    flex-direction: column; }
 
 .portfolio-container {
   padding: 50px; }

@@ -47,6 +47,18 @@ body {
   // minus top + bottom padding
   height: calc(100vh - 100px);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.6;
+  p.lead {
+    font-size: 1.1em;
+    padding-bottom: 1em;
+  }
+  svg {
+    display: block;
+    margin: 0 auto;
+  }
 }
 .section-title {
   font-size: 50px;
@@ -56,10 +68,10 @@ body {
   top: 150px;
   // padding: 100px 0 0 0;
 }
-.flex-space-around {
-  display: flex;
-  justify-content: space-around;
-}
+// .flex-space-around {
+//   display: flex;
+//   justify-content: space-around;
+// }
 .rotated-up-center {
   -ms-transform: translate(0px, -50px) rotate(-90deg);
   -moz-transform: translate(0px, -50px) rotate(-90deg);
@@ -156,10 +168,15 @@ body {
   width: 80%;
   // change to width: calc(50% - 170px); when scrolled out of home
   .hero {
-    width: 40%;
-    /* height: 50vh; */
-    padding: 50px 30px;
+    width: 45%;
+    // padding: 50px 30px;
     height: 100vh;
+    position: absolute;
+    right: 170px;
+    transition: 1.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .hero-title {
       font-family: 'acre', 'Open Sans', sans-serif;
       font-size: 80px;
@@ -171,9 +188,10 @@ body {
         letter-spacing: 3px;
       }
     }
-    img {
-      width: 100%;
-    }
+    // img {
+    //   width: auto;
+    //   height: 80%;
+    // }
   }
 }
 .right-content {
@@ -182,6 +200,27 @@ body {
   position: absolute;
   right: 0;
   width: 60%;
+  .full-height {
+    .skills {
+      li {
+        display: inline-block;
+        width: 19%;
+        text-align: center;
+        margin-bottom: 10px;
+        i {
+          font-size: 40px;
+          display: block;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 // PORTFOLIO PAGE
