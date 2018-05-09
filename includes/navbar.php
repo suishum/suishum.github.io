@@ -34,7 +34,12 @@
   </div>
 
   <div class="align-bottom rotated-up-center">
-    <h2 class="nav-link"><a class="brand" href="index.php"><span>Sui</span> <br/>Shum</a></h2>
+    <h2 class="nav-link"><a class="brand scroll" href="index.php#profile"><span>Sui</span> <br/>Shum</a></h2>
   </div>
   <!-- <li><a href="index.php#contact"><i class="fas fa-info"></i>Contact</a></li> -->
+</div>
+<div class="nav-burger">
+  <div class="burgerbar1"></div>
+  <div class="burgerbar2"></div>
+  <div class="burgerbar3"></div>
 </div>

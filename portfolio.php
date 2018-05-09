@@ -1,8 +1,8 @@
 <?php
-  include("includes/head.php");
+  include("./includes/head.php");
 ?>
 <?php
-  include("includes/navbar.php");
+  include("./includes/navbar.php");
 ?>
 
 <div class="container">
@@ -12,7 +12,7 @@
     <section>
       <div class="project-title"><h3>Jbly</h3></div>
       <div class="project-info">
-        <div class="project-img"><img src="images/jbly-logo.png"/></div>
+        <div class="project-img"><img src="./images/jbly-logo.png"/></div>
         <div class="project-links">
           <p><span class="strong">Type: </span>MERN Stack App</p>
           <p><span class="strong">Time: </span>1 week (pair project)</p>
@@ -31,7 +31,7 @@
     <section>
       <div class="project-title"><h3>MateDate</h3></div>
       <div class="project-info">
-        <div class="project-img"><img src="images/m8d8-logo.svg"/></div>
+        <div class="project-img"><img src="./images/m8d8-logo.svg"/></div>
         <div class="project-links">
           <p><span class="strong">Type: </span>MEAN Stack App</p>
           <p><span class="strong">Time: </span>1 week (pair project)</p>
@@ -50,7 +50,7 @@
     <section>
       <div class="project-title"><h3>The Dining Dog</h3></div>
       <div class="project-info">
-        <div class="project-img"><img src="images/thediningdog-img.png"/></div>
+        <div class="project-img"><img src="./images/thediningdog-img.png"/></div>
         <div class="project-links">
           <p><span class="strong">Type: </span>Express App</p>
           <p><span class="strong">Time: </span>1 week (solo project)</p>
@@ -69,7 +69,7 @@
     <section>
       <div class="project-title"><h3>Jimba, The Cropdusting Pug</h3></div>
       <div class="project-info">
-        <div class="project-img"><img src="images/jimba.gif"/></div>
+        <div class="project-img"><img src="./images/jimba.gif"/></div>
         <div class="project-links">
           <p><span class="strong">Type: </span>JavaScript Game</p>
           <p><span class="strong">Time: </span>1 week (solo project)</p>

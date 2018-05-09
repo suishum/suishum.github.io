@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <?php
-  include("includes/head.php");
+  include("./includes/head.php");
 ?>
   <body>
     <?php
-      include("includes/navbar.php");
+      include("./includes/navbar.php");
     ?>
     <div class="container">
-      <div class="left-content">
+      <div id="profile" class="left-content">
           <div class="hero">
             <h1 class="hero-title"><span>Sui</span> <br/> Shum</h1>
-            <img class="hero-image" src="images/sui.jpg" alt="Sui Shum profile picture"></img>
+            <img class="hero-image" src="./images/sui.jpg" alt="Sui Shum profile picture"></img>
           </div>
       </div>
       <div class="right-content">
@@ -95,19 +95,14 @@
             Proficient in techniques to boost SEO score.
             WordPress efficient.</p> -->
           </div>
-          <div><a class="button" href="portfolio.php">Click here to check out my portfolio</a></div>
+          <div><a class="button" href="portfolio.php">Check out my portfolio</a></div>
         </section>
         <section id="contact" class="full-height">
           <h2 class="section-title rotated-up-rb">Contact</h2>
           <!-- <i class="fas fa-envelope"></i> -->
-          <div>
-            <form>
-              <input placeholder="Name"/>
-              <input placeholder="Email"/>
-              <textarea placeholder="Message"></textarea>
-              <button class="button"type="submit">Submit</button>
-            </form>
-          </div>
+          <?php
+          include("./includes/contact-form.php");
+          ?>
         </section>
       </div>
     </div>

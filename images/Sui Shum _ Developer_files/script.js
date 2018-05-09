@@ -1,8 +1,6 @@
 /* global Validator */
 $(document).ready(function() {
   console.log('jquery running');
-  const burger = $('.nav-burger')[0];
-  const navbar = $('.navbar')[0];
   const portfolioContainer = $('.portfolio-container')[0];
   const hero = $('.hero')[0];
   const heroImage = $(hero).children()[1];
@@ -10,68 +8,40 @@ $(document).ready(function() {
   let scrollbarLocation = $(this).scrollTop();
 
   function modifyHero() {
-    if (scrollbarLocation > 100 && window.innerWidth > 600) {
+    if (scrollbarLocation > 100) {
       $(hero).css('right', '400px');
       $(heroImage).css({
         'width': '50%',
+        'transition': '1.5s',
+        'position': 'relative',
         'right': '100px',
         'bottom': '55px'
       });
       $(heroTitle).css({
+        'z-index': 10,
+        'position': 'relative',
         'left': '0',
-        'top': '0'
+        'top': '0',
+        'transition': '1.5s'
       });
     } else {
       $(hero).css('right', '180px');
       $(heroImage).css({
         'width': '80%',
+        'transition': '1.5s',
+        'position': 'relative',
         'right': '160px',
         'bottom': '65px'
       });
       $(heroTitle).css({
+        'z-index': 10,
+        'position': 'relative',
         'left': '160px',
-        'top': '65px'
-      });
-    }
-
-    if (window.innerWidth <= 600) {
-      $(heroImage).css({
-        'width': '100%',
-        'right': '175px'
-      });
-      $(heroTitle).css({
-        'left': '-50px',
-        'top': '-10px'
-      });
-    }
-  }
-
-  function toggleBurger() {
-    $(burger).toggleClass('change');
-    console.log($(burger).hasClass('change'));
-    console.log($(navbar).children()[0]);
-    if ($(burger).hasClass('change')) {
-      $(burger).css({
-        'left': '120px',
-        'transition': '1.5s'
-      });
-      $(navbar).css({
-        'left': '0',
-        'transition': '1.5s'
-      });
-    } else {
-      $(burger).css({
-        'left': '0',
-        'transition': '1.5s'
-      });
-      $(navbar).css({
-        'left': '-120px',
+        'top': '65px',
         'transition': '1.5s'
       });
     }
   }
-
-  $(burger).click(() => toggleBurger());
 
   if (!portfolioContainer) {
     // HOMEPAGE JS
@@ -79,16 +49,12 @@ $(document).ready(function() {
     // Variables
     const scrollLink = $('.scroll');
     // Resize hero image on first load
-    // console.log('inner width',window.innerWidth);
     modifyHero();
     console.log('hero image resized');
     console.log('smoothScroll running');
     // Smooth scrolling for navbar link clicks
     scrollLink.click(function(e) {
       e.preventDefault();
-      if (window.innerWidth <= 600) {
-        toggleBurger();
-      }
       $('body, html').animate({
         scrollTop: $(this.hash).offset().top
       }, 1000 );
